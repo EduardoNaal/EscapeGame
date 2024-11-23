@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCAPA DEL CUBO ROJO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container text-center">
+        <h1 class="my-4">ESCAPA DE BEYONCE</h1>
+
+        <div class="alert alert-info my-4">
+            Usa las teclas <strong>W, A, S, D</strong> para mover al jugador y evita el cubo rojo.
+            ¡Cambia el enemigo, el escenario y la dificultad para personalizar tu experiencia!
+        </div>
+
+        <audio src="music/Beyonce.mp3"></audio>
+
+        <div id="game-area">
+            <div id="player" class="personaje"></div>
+            <div id="beyonce" class="personaje"></div>
+        </div>
+
+        <div class="settings">
+            <h2>Configuración</h2>
+            <div class="row my-4">
+                <div class="col-md-6">
+                    <label for="select-enemy" class="form-label">Selecciona el enemigo</label>
+                    <select id="select-enemy" class="form-select" aria-label="Selecciona el enemigo">
+                        <option value="beyonce.jpeg">Beyonce</option>
+                        <option value="temmie.webp">Temmie</option>
+                        <option value="sans.png">Sans</option>
+                        <option value="toby.gif">Toby</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="select-scenary" class="form-label">Selecciona el escenario</label>
+                    <select id="select-scenary" class="form-select" aria-label="Selecciona el escenario">
+                        <option value="beyonce-location.jpg">Concierto</option>
+                        <option value="sans-location.jpg">Jusgado</option>
+                        <option value="temmie-location.webp">BOB</option>
+                        <option value="toby-location.gif">GUAU</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Nueva sección para seleccionar dificultad -->
+            <div class="row my-4">
+                <div class="col-md-6">
+                    <label for="select-difficulty" class="form-label">Selecciona la dificultad</label>
+                    <select id="select-difficulty" class="form-select" aria-label="Selecciona la dificultad">
+                        <option value="low" selected>Baja</option>
+                        <option value="medium">Media</option>
+                        <option value="high">Alta</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col">
+                <button id="start" class="btn btn-success me-2">Start</button>
+                <button id="restart" class="btn btn-warning ms-2">Restart</button>
+            </div>
+        </div>
+
+        <div id="score" class="my-3">
+            <h2>Puntaje: <span id="score-value" class="badge bg-primary">0</span></h2>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
